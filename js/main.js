@@ -1,34 +1,42 @@
-/*确认名字*/
+rowCount = 1;
 
-function getfraname() {
-  var franame=document.getElementById("franame").value
-  var xianhide=document.getElementById("xianhide");
-  document.getElementById("houhide").style.display = "none"
-  xianhide.style.display = "block"
-  var mwmark = document.getElementById("mwmark")
-  mwmark.insertAdjacentHTML("beforeend",franame)
+/* Confirm Title */
+function getFraname() {
+    var franame = document.getElementById("franame").value
+    var inputStep=document.getElementById("inputStep");
+    document.getElementById("initStep").style.display = "none"
+    inputStep.style.display = "block"
+    var mwMark = document.getElementById("mwMark")
+    mwMark.insertAdjacentHTML("beforeend",franame)
 }
-/*添加信息*/
-function getfracontent() {
-  var fraco=document.getElementById("fracontent").value
-  document.getElementById("writee").insertAdjacentHTML("beforeend","<br />|-<br />{{#if: {{{")
-  document.getElementById("writee").insertAdjacentHTML("beforeend",fraco)
-  document.getElementById("writee").insertAdjacentHTML("beforeend","|}}} |<br />{{!}}  class=&quot;left&quot; {{!}} ")
-  document.getElementById("writee").insertAdjacentHTML("beforeend",fraco)
-  document.getElementById("writee").insertAdjacentHTML("beforeend","<br />{{!}}  class=&quot;right&quot; {{!}} {{{")
-  document.getElementById("writee").insertAdjacentHTML("beforeend",fraco)
-  document.getElementById("writee").insertAdjacentHTML("beforeend","|}}}}}")
-  var mwmark = document.getElementById("mwmark")
-  mwmark.insertAdjacentHTML("beforeend","<br>|")
-  mwmark.insertAdjacentHTML("beforeend",fraco)
-  mwmark.insertAdjacentHTML("beforeend","   =")
-  document.getElementById("fracontent").value = ""
+
+/* Add Rows */
+function getFra() {
+    rowCount = rowCount + 1
+
+    /* Fetch User Input */
+    let fraco = document.getElementById("fracontent").value
+    let fraid = document.getElementById("fraid").value
+    let fratype = $("input[name='fratype']:checked").val()
+    let fracol = $("input[name='fracol']:checked").val()
+
+
+    document.getElementById("templateWikitext").insertAdjacentHTML("beforeend","<br>")
+    document.getElementById("templateWikitext").insertAdjacentHTML("beforeend","<br>|label"+rowCount+"      = "+fraco+"")
+    document.getElementById("templateWikitext").insertAdjacentHTML("beforeend","<br>|data"+rowCount+"       = {{{"+fraco+"|}}}")
+    document.getElementById("templateWikitext").insertAdjacentHTML("beforeend","<br>|rowclass"+rowCount+"   = data-"+fraid+" infobox-"+fratype+" infobox-"+fracol+"")
+    var mwMark = document.getElementById("mwMark")
+    mwMark.insertAdjacentHTML("beforeend","<br>| "+fraco+" = ")
+
+    /* Clean-up */
+    document.getElementById("fracontent").value = ""
+    document.getElementById("fraid").value = ""
 }
-function stopmakefra() {
-  document.getElementById("writee").insertAdjacentHTML("beforeend","<br />|}")
-  document.getElementById("mwmark").insertAdjacentHTML("beforeend","<br />}}")
-  document.getElementById("mwmark").style.opacity = "100"
-  document.getElementById("cohide").style.opacity = "100"
-  document.getElementById("buttoncr").style.display = "none";
-  document.getElementById("houhide").style.display = "none"
+function stopMakeFra() {
+    document.getElementById("templateWikitext").insertAdjacentHTML("beforeend","<br>|}")
+    document.getElementById("mwMark").insertAdjacentHTML("beforeend","<br>}}")
+    document.getElementById("mwMark").style.opacity = "100"
+    document.getElementById("usageTitle").style.opacity = "100"
+    document.getElementById("inputSection").style.display = "none";
+    document.getElementById("initStep").style.display = "none"
 }
