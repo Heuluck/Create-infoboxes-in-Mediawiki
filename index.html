@@ -21,36 +21,33 @@
 					<input type="radio" id="type-subtitle" name="fratype" value="subtitle" checked/>
 					<label for="type-subtitle">标语</label>
 				</div>
-
 				<div>
 					<input type="radio" id="type-data" name="fratype" value="data" />
 					<label for="type-data">内容</label>
 				</div>
-
 				<div>
 					<input type="radio" id="type-header" name="fratype" value="header" />
 					<label for="type-header">标题</label>
 				</div>
+
 				宽度:
 				<div>
-					<label for="type-col2"></label><input type="radio" id="type-col2" name="fracol" value="col2" checked/>
-					<label for="type-subtitle">2</label>
+					<input type="radio" id="type-col2" name="fracol" value="col2" checked/>
+					<label for="type-col2">2</label>
 				</div>
-
 				<div>
-					<label for="type-col3"></label><input type="radio" id="type-col3" name="fracol" value="col3" />
-					<label for="type-data">3</label>
+					<input type="radio" id="type-col3" name="fracol" value="col3" />
+					<label for="type-col3">3</label>
 				</div>
-
 				<div>
-					<label for="type-col4"></label><input type="radio" id="type-col4" name="fracol" value="col4" />
-					<label for="type-header">4</label>
-				</div>
+					<input type="radio" id="type-col4" name="fracol" value="col4" />
+					<label for="type-col4">4</label>
+				</div><br>
 				<button onclick="getFra()">添加</button>
 				<button onclick="stopMakeFra()">结束</button>
 			</div>
 		  <h2>模板页面：</h2>
-<pre id="templateWikitext">
+<br><pre id="templateWikitext">
 {{Infobox|
 |bodyclass		= mw-collapsible floatright
 |image1			= {{#if:{{{图片文件名|}}}|[[File:{{{图片文件名}}}|400px]]|[[File:No Image Available.png|400px]]}}
@@ -59,9 +56,8 @@
 |header1		= {{{名称|{{PAGENAME}}}}}
 |rowclass1		= infobox-title</pre>
 <br />
-<br />
             <h2 id="usageTitle" style="opacity:0">普通页面：</h2>
-			<pre id="mwMark" style="opacity: 0;">{{</pre>
+			<br><pre id="mwMark" style="opacity: 0;">{{</pre>
 </div>
     </div>
     <script src="js/main.js" type="text/javascript"></script>
