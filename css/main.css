@@ -1,28 +1,78 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
 .container {
     width: 70%;
-    margin: 10% auto 0;
-    background-color: #f0f0f0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #fff;
     padding: 2% 5%;
-    border-radius: 10px
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-    padding-left: 20px;
+/* Header Styles */
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    transition: opacity 2s;
 }
 
-    ul li {
-        line-height: 2.3
-    }
+/* Form Styles */
+#initStep, #inputStep {
+    margin-bottom: 20px;
+}
 
-a {
-    color: #20a53a
+label {
+    display: inline-block;
+    width: 80px;
 }
-#usageWikitext{
-    transition-duration: 2s
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
+
+button {
+    padding: 8px 16px;
+    background-color: #5375ea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1c3fbd;
+}
+
+/* Radio Button Styles */
+input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Code and Pre Styles */
 pre {
-    background-color:#95a5a6
-}
-h2{
-    transition-duration: 2s
+    background-color: rgba(0, 0, 0, 0.14);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow-x: auto;
 }
