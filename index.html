@@ -55,12 +55,18 @@
 
 |header1		= {{{名称|{{PAGENAME}}}}}
 |rowclass1		= infobox-title</pre>
-<br />
+			<button id="templateCopy" class="btn" data-clipboard-target="#templateWikitext">复制</button><br />
+
             <h2 id="usageTitle" style="opacity:0">普通页面：</h2>
 			<br><pre id="mwMark" style="opacity: 0;">{{</pre>
+			<button id="mwMarkCopy" class="btn" data-clipboard-target="#mwMark">复制</button>
 </div>
     </div>
     <script src="js/main.js" type="text/javascript"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+	<script>
+		new ClipboardJS('.btn');
+	</script>
 </body>
 </html>

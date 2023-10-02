@@ -1,3 +1,4 @@
+/* Init */
 rowCount = 1;
 
 /* Confirm Title */
@@ -38,5 +39,7 @@ function stopMakeFra() {
     document.getElementById("mwMark").style.opacity = "100"
     document.getElementById("usageTitle").style.opacity = "100"
     document.getElementById("inputSection").style.display = "none";
-    document.getElementById("initStep").style.display = "none"
+    document.getElementById("initStep").style.display = "none";
+    document.getElementById('templateCopy').style.display = 'inline-block';
+    document.getElementById('mwMarkCopy').style.display = 'inline-block';
 }
