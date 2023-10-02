@@ -4,11 +4,18 @@
 
 由于个人只会一丁点js，所以写的是个网页
 
-Create info-boxes in a simple way
-Due to some bugs in the infobox extension, I gotta use table to make infoboxes, but it was too hard to do, so this is the simple way to create it
-# 计划/plan
+Create Infoboxes in a simple way.
 
-目前已实现：通过输入内容简单创建信息栏模板和引用内容<br />
-<del>未来可能：可自定义颜色</del>
+# 计划 / To-Dos
+<del>作者已经摆烂，躺平；但如果有严重bug，还是会修的</del>
 
-作者已经摆烂，躺平；但如果有严重bug，还是会修的
+- [x] 支持新版 Infobox
+- [x] Support new version of Infobox
+- [ ] 美化界面
+- [ ] Beautify the interface
+- [ ] 支持自定义颜色
+- [ ] Support custom colors
+- [ ] 多语言支持
+- [ ] Multi-language support
+- [ ] 支持更多参数
+- [ ] Support more parameters
