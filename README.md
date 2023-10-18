@@ -8,7 +8,7 @@ Create Infoboxes in a simple way.
 Since manually creating Infobox templates is too laborious, I made a simple JavaScript project to simply create an information bar formed by MediaWiki Module:Infobox.
 
 # 演示 / Demo
-https://sonicth0623.github.io/Create-infoboxes-in-Mediawiki/
+https://heuluck.github.io/Create-infoboxes-in-Mediawiki/
 
 # 计划 / To-Dos
 <del>作者已经摆烂，躺平；但如果有严重bug，还是会修的</del>
